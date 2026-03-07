@@ -7,13 +7,15 @@ package CourseWork;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class AIModel
+public class AIModel //class name
 {
-    String modelName;
+    //attributes
+    String modelName; 
     Double price;
     int parameter;
     String window;
     
+    //Constructor
     public AIModel(String modelName, Double price, int parameter, String window)
     {
         this.modelName= modelName;
@@ -22,6 +24,28 @@ public class AIModel
         this.window= window;
     }
     
+    //Getter method of attributes
+    public String getModelName()
+    {
+        return modelName;
+    }
+    
+    public Double getPrice()
+    {
+        return price;
+    }
+    
+    public int getParameter()
+    {
+        return parameter;
+    }
+    
+    public String getWindow()
+    {
+        return window;
+    }
+    
+    //Displaying the output
     public void displayInfo()
     {
         System.out.println("Model Name: "+ this.modelName);

@@ -15,15 +15,16 @@ public class Window extends JFrame
     public Window()
     {
         setTitle("CS4001NI Programming");
-        setSize(400,500);
+        setSize(400,300);
         
         
         JPanel panel = new JPanel();
         
         //panel.setBackground(Color.ORANGE);
-        panel.setBorder(BorderFactory.createTitledBorder("User Info"));
+        panel.setBorder(BorderFactory.createTitledBorder("Library Notice"));
         
         JLabel label = new JLabel("Username: ");
+        label.setFont(new Font("Arial", Font.BOLD, 16));
         label.setBounds(50, 50, 100, 30);
         
         JTextField txtField = new JTextField();
