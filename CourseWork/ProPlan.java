@@ -9,11 +9,41 @@ package CourseWork;
  */
 public class ProPlan extends AIModel
 {
-    int slot;
+    private int slot; //attributes
     
-    public ProPlan(String modelName, Double price, int parameter, String window, int slot)
+    //Constructor
+    public ProPlan(String modelName, double price, int parameter, String window, int slot)
     {
         super(modelName, price, parameter, window);
         this.slot= slot;
+    }
+    
+    //Method to add team member
+    public String addTeamMember(String memberName)
+    {
+        if(slot > 0) 
+        {
+            slot--;
+            return "Team member " + memberName + " added. Remaining slots: " + slot;
+        }
+        else
+        {
+            return "Error: No available team slots in the Pro Plan.";
+        }
+    }
+
+    //Method to remove team member
+    public String removeTeamMember(String memberName)
+    {
+        slot++;
+        return "Team member " + memberName + " removed. Available slots: " + slot;
+    }
+
+    //Overriding the method of AiModel
+    @Override
+    public String displayInfo()
+    {
+        return super.displayInfo() + 
+               "Available Team Slots: "+ slot;
     }
 }

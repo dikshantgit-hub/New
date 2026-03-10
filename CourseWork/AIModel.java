@@ -10,13 +10,13 @@ package CourseWork;
 public class AIModel //class name
 {
     //attributes
-    String modelName; 
-    Double price;
-    int parameter;
-    String window;
+    private String modelName; 
+    private double price;
+    private int parameter;
+    private String window;
     
     //Constructor
-    public AIModel(String modelName, Double price, int parameter, String window)
+    public AIModel(String modelName, double price, int parameter, String window)
     {
         this.modelName= modelName;
         this.price= price;
@@ -30,7 +30,7 @@ public class AIModel //class name
         return modelName;
     }
     
-    public Double getPrice()
+    public double getPrice()
     {
         return price;
     }
@@ -46,11 +46,11 @@ public class AIModel //class name
     }
     
     //Displaying the output
-    public void displayInfo()
+    public String displayInfo()
     {
-        System.out.println("Model Name: "+ this.modelName);
-        System.out.println("Price:: "+ this.price);
-        System.out.println("Parameter: "+ this.parameter);
-        System.out.println("Window Size: "+ this.window);
+        return "Model Name: " + modelName +
+           "\nPrice: " + price +
+           "\nParameters: " + parameter +
+           "\nContext Window: " + window;
     }
 }

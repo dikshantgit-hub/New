@@ -21,14 +21,14 @@ public class Q3 extends JFrame
         JPanel panel = new JPanel();
         panel.setBounds(100, 50, 100, 30);
         
-        JLabel label = new JLabel();
-        label.setBounds(80, 40, 80, 20);
+        JLabel label = new JLabel("Student Profile");
+        label.setBounds(40, 30, 150, 20);
         
-        panel.add(label);
         panel.setLayout(null);
+        panel.add(label);
         add(panel);
         
-        
+        setLayout(null);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
